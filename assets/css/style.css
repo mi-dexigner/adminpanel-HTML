@@ -12,9 +12,16 @@
     text-decoration: none;
     font-family: 'Poppins',sans-serif;
 }
+#miwrap {
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+     -webkit-font-smoothing: subpixel-antialiased; 
+}
 
 .sidebar{
-    width:265px;
+    width:160px;
     position: fixed;
     top:0px;
     left: 0px;
@@ -22,36 +29,46 @@
     background-color: var(--main-color);
     z-index: 100;
     transition: all .2s ease-in-out;
+    z-index: 9990;
+
 }
 .sidebar-brand{
-   height: 90px;
-   padding: 1rem 0 1rem 2rem; 
+   height: 50px;
+   padding: 0.5rem 0 0.5rem .5rem; 
    color: #fff;
 }
 .sidebar-brand span{
     display: inline-block;
-    padding-right: 1rem;
+    padding-right: .4rem;;
+}
+.sidebar-brand span:last-child{
+    padding-right: 0rem;
+    font-size: 1.1rem;
 }
 .sidebar-men{
     margin-top: 1rem;
 }
+.sidebar-menu ul{position: relative;}
 .sidebar-menu li{
     width: 100%;
-    margin-bottom: 1.3rem;
-    padding-left: 2rem;
+    margin-bottom: .1rem;
+    padding-left: .5rem;
 }
 
 .sidebar-menu a{
-    display: block;
+    display: flex;
+    align-items: center;
     color: #fff;
-    font-size: 1.1rem;
-    padding-left: 1rem;
+    font-size: .8rem;
+    line-height: .8rem;
+    padding-left: .5rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    transition: all 300ms linear;
 }
-
+.sidebar-menu a:hover,
 .sidebar-menu a.active{
 background-color: #fff;
-padding-top: 1rem;
-padding-bottom: 1rem;
 color: var(--main-color);
 border-radius: 30px 0 0 30px;
 }
@@ -59,6 +76,9 @@ border-radius: 30px 0 0 30px;
 .sidebar-menu a span:first-child{
     font-size: 1.5rem;
     padding-right: 1rem;
+}
+#nav-toggle{
+    display: none;
 }
 #nav-toggle:checked + .sidebar {
     width: 70px;
@@ -90,20 +110,21 @@ border-radius: 30px 0 0 30px;
 }
 
 .main-content{
-    margin-left: 265px;;
+    margin-left: 160px;
 }
 
 header{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
     position: fixed;
-    left:265px;
-    width: calc(100% - 265px);
+    left:160px;
+    width: calc(100% - 160px);
     top:0px;
     z-index: 100;
     transition: all .2s ease-in-out;
+    background-color: #fff;
 }
 header h2{
     color: #555;
@@ -141,7 +162,11 @@ header label span{
 
 .user-wrapper img{
     border-radius: 50%;
-    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.user-wrapper > div{
+    display: flex;
+    flex-direction: column;
 }
 
 .user-wrapper h4{
