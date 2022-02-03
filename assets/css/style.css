@@ -123,12 +123,13 @@ position: relative;
 
 #nav-toggle:checked + .sidebar .sidebar-brand,
 #nav-toggle:checked + .sidebar li{
-    padding-left: 1rem;
+    padding-left:.5em;
     text-align: center;
 }
 
 #nav-toggle:checked + .sidebar li a{
     padding-left: 0rem;
+    justify-content: center;
 }
 
 
