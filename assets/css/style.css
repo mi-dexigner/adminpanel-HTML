@@ -53,8 +53,10 @@
     width: 100%;
     margin-bottom: .1rem;
     padding-left: .5rem;
+    position: relative;
 }
 
+.sidebar-menu ul.submenu a,
 .sidebar-menu a{
     display: flex;
     align-items: center;
@@ -66,12 +68,47 @@
     padding-bottom: .4rem;
     transition: all 300ms linear;
 }
-.sidebar-menu a:hover,
-.sidebar-menu a.active{
+.sidebar-menu-dropdown.active > a,
+.sidebar-menu li:hover > a,
+.sidebar-menu li.active > a{
 background-color: #fff;
 color: var(--main-color);
 border-radius: 30px 0 0 30px;
 }
+
+.sidebar-menu ul.submenu{
+    position: absolute;
+    top: -1000em;
+    left: 160px;
+    min-width: 160px;
+    width: auto;
+    z-index: 9999;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+    word-wrap: break-word;
+    background-color: #1a84ace8;
+    padding: 7px 0 8px;
+}
+
+.sidebar-menu .submenu-hover  ul.submenu{
+    top:0em;
+}
+.sidebar-menu-dropdown.active ul.submenu{
+position: relative;
+    z-index: 3;
+    top: auto;
+    left: -10px;
+    right: auto;
+    bottom: auto;
+    border: 0 none;
+    margin-top: 0;
+    box-shadow: none;
+}
+.sidebar-menu ul.submenu a:hover{
+    color: var(--main-color);
+}
+.sidebar-menu ul.submenu a span{
+     font-size: .8rem;
+ }
 
 .sidebar-menu a span:first-child{
     font-size: 1.5rem;
@@ -107,6 +144,9 @@ border-radius: 30px 0 0 30px;
 #nav-toggle:checked ~ .main-content header{
     width: calc(100% - 70px);
     left: 70px;
+}
+#nav-toggle:checked ~ .sidebar .sidebar-menu ul.submenu {
+    display: none;
 }
 
 .main-content{
@@ -164,7 +204,8 @@ header label span{
 
 .user-wrapper img{
     border-radius: 50%;
-    margin-left: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
 }
 .user-wrapper > div{
     display: flex;
@@ -181,7 +222,7 @@ header label span{
     margin-top: -3px !important;
 }
 main{
-    margin-top: 85px;
+    margin-top: 60px;
     padding: 2rem 1.5rem;
     background-color: #f1f5f9;
     min-height: calc(100vh - 90px);
@@ -372,6 +413,13 @@ td .status{
 }
 
 @media only screen and (max-width: 768px) {
+    .user-wrapper h4{
+        font-size: .8rem;
+    }
+     .user-wrapper small{
+        font-size: .7rem;
+        text-align: right;
+    }
     .cards{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -420,17 +468,17 @@ td .status{
     #nav-toggle:checked + .sidebar {
         left: 0 !important;
         z-index: 100;
-        width: 345px;
+        width: 160px;
     }
     
     #nav-toggle:checked + .sidebar .sidebar-brand,
     #nav-toggle:checked + .sidebar li{
-        padding-left: 2rem;
+        padding-left: 0.5rem;
         text-align: left;
     }
     
     #nav-toggle:checked + .sidebar li a{
-        padding-left: 1rem;
+        padding-left: 0.5rem;
     }
     
     

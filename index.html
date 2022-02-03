@@ -18,25 +18,53 @@
 
      <div class="sidebar-menu">
          <ul>
-             <li><a href="#" class="active"><span class="las la-igloo"></span> <span>Dashboard</span></a></li>
-             <li><a href="#"><span class="las la-thumbtack"></span> <span>Posts</span></a></li>
+             <li class="active"><a href="#"><span class="las la-igloo"></span> <span>Dashboard</span></a>
+             </li>
+              <!-- active -->
+             <li class="sidebar-menu-dropdown"><a href="#"><span class="las la-thumbtack"></span> <span>Posts</span></a>
+                <ul class="submenu">
+                    <li><a href="#"><span>All Posts</span></a></li>
+                    <li><a href="#"><span>Add New</span></a></li>
+                    <li><a href="#"><span>Categories</span></a></li>
+                    <li><a href="#"><span>Tags</span></a></li>
+                </ul>
+             </li>
              <li><a href="#"><span class="las la-photo-video"></span> <span>Media</span></a></li> 
-             <li><a href="#"><span class="lar la-file"></span> <span>Pages</span></a></li>
+             <li class="sidebar-menu-dropdown"><a href="#"><span class="lar la-file"></span> <span>Pages</span></a>
+                    <ul class="submenu">
+                    <li><a href="#"><span>All Pages</span></a></li>
+                    <li><a href="#"><span>Add New</span></a></li>
+                </ul>
+             </li>
               <li><a href="#"><span class="las la-comment-alt"></span> <span>Comments</span></a></li> 
                <li><a href="#"><span class="lar la-envelope"></span> <span>Contact</span></a></li>
-             <li><a href="#"><span class="las la-store-alt"></span> <span>Orders</span></a></li>
-             <!-- 
-            store settings
-                order
-                report
-                coupon
-                customer
-                payment settings
-              -->
-             <li><a href="#"><span class="las la-shopping-bag"></span> <span>Products</span></a></li>
-             <li><a href="#"><span class="las la-envelope"></span> <span>Mail</span></a></li>
-             <li><a href="#"><span class="las la-user"></span> <span>Users</span></a></li>
-             <li><a href="#"><span class="las la-cog"></span> <span>Settings</span></a></li>
+             <li class="sidebar-menu-dropdown"><a href="#"><span class="las la-store-alt"></span> <span>Store</span>
+ <ul class="submenu">
+                    <li><a href="#"><span>Order</span></a></li>
+                    <li><a href="#"><span>Report</span></a></li>
+                    <li><a href="#"><span>Coupon</span></a></li>
+                    <li><a href="#"><span>Customer</span></a></li>
+                    <li><a href="#"><span>Payment</span></a></li>
+                    <li><a href="#"><span>Settings</span></a></li>
+                </ul>
+             </a></li>
+             <li class="sidebar-menu-dropdown"><a href="#"><span class="las la-shopping-bag"></span> <span>Products</span>
+ <ul class="submenu">
+                    <li><a href="#"><span>All Products</span></a></li>
+                    <li><a href="#"><span>Add New</span></a></li>
+                    <li><a href="#"><span>Categories</span></a></li>
+                    <li><a href="#"><span>Tags</span></a></li>
+                </ul>
+             </a></li>
+             <li class="sidebar-menu-dropdown"><a href="#"><span class="las la-user"></span> <span>Users</span>
+ <ul class="submenu">
+                    <li><a href="#"><span>All Users</span></a></li>
+                    <li><a href="#"><span>Add New</span></a></li>
+                    <li><a href="#"><span>Profile</span></a></li>
+                    
+                </ul>
+             </a></li>
+             <li class="sidebar-menu-dropdown"><a href="#"><span class="las la-cog"></span> <span>Settings</span></a></li>
          </ul>
      </div>
  </div>  
@@ -219,5 +247,8 @@
      </main>
  </div>
  </div> 
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script type="text/javascript" src="assets/js/admin.js"></script>
 </body>
 </html>
