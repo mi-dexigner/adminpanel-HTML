@@ -56,7 +56,7 @@
                     <li><a href="#"><span>Tags</span></a></li>
                 </ul>
              </li>
-             <li class="menu-dropdown">
+             <li class="menu-dropdown active">
                 <a href="users.html"><span class="las la-user"></span> <span>Users</span></a>
  <ul class="submenu">
                     <li><a href="users.html"><span>All Users</span></a></li>
@@ -65,7 +65,7 @@
                     
                 </ul>
              </li>
-             <li class="active">
+             <li>
                 <a href="options-general.html"><span class="las la-cog"></span> <span>Settings</span></a></li>
          </ul>
      </div>
@@ -73,13 +73,12 @@
  <div class="main-content">
      <header>
          <h2>
-
              <label for="nav-toggle">
                  <span class="las la-bars"></span>
              </label>
-             
+           
          </h2>
-        <div class="user-wrapper menu-dropdown">
+         <div class="user-wrapper menu-dropdown">
            <div>
                 <div>
                  <h4>Howdy,midexigner</h4>
@@ -102,82 +101,89 @@
 
      <main>
         <div class="card">
-            <div class="card-header">
-                <h3>General Settings</h3>
-            </div>
-            <div class="card-body">
-                <form method="post" method="user-new.html" id="createuser" enctype="">
+<div class="card-header page-header column">
+    <h3>Add New User</h3>
+    <small>Create a brand new user and add them to this site.</small>
+</div>
+<div class="card-body">
+<form method="post" method="user-new.html" id="createuser">
 <input type="hidden" name="action" value="createuser">
 <table class="form-table" role="presentation">
 <tbody>
-     <tr class="form-field">
-    <th>
-      <label for="site_favicon">Favicon</label>
-    </th>
-    <td>
-     <input type="file" name="site_favicon" id="site_favicon">
-    </td>
-  </tr>
-    <tr class="form-field">
-    <th>
-      <label for="site_logo">Logo</label>
-    </th>
-    <td>
-     <input type="file" name="site_logo" id="site_logo">
-    </td>
-  </tr>
- 
   <tr class="form-field">
     <th>
-      <label for="site_name">Site Title</label>
+      <label for="user_login">Username (required)</label>
     </th>
     <td>
-     <input type="text" placeholder="Site Title" name="site_name" id="site_name">
+     <input type="text" placeholder="Username" name="user_login" id="user_login">
     </td>
   </tr>
   <tr class="form-field">
     <th>
-      <label for="site_description">Tagline</label>
+      <label for="user_email">Email (required)</label>
     </th>
     <td>
-      <input type="text" placeholder="Tagline" name="site_description" id="site_description">
-      <p>In a few words, explain what this site is about.</p>
+      <input type="email" placeholder="Email" name="user_email" id="user_email">
+      
     </td>
   </tr>
   <tr class="form-field">
     <th scope="row">
-      <label for="site_email">  Email Address</label>
+      <label for="first_name"> First Name</label>
     </th>
     <td>
-      <input type="email" placeholder="Email Address" name="site_email" id="site_email">
+      <input type="text" placeholder="First Name" name="meta[first_name]" id="first_name">
     </td>
   </tr>
   <tr class="form-field">
     <th scope="row">
-      <label for="site_phone">Phone No</label>
+      <label for="last_name">Last Name</label>
     </th>
     <td>
-      <input type="text" placeholder="Phone No" name="site_phone" id="site_phone">
+      <input type="text" placeholder="Last Name" name="meta[last_name]" id="last_name">
     </td>
   </tr>
    <tr class="form-field">
     <th scope="row">
-      <label for="site_address">Address</label>
+      <label for="website">Website</label>
     </th>
     <td>
-      <input type="text" placeholder="Address" name="site_address" id="site_address">
+      <input type="text" placeholder="Website" name="meta[website]" id="website">
     </td>
 
   </tr>
-  
+  <tr class="form-field">
+     <th scope="row">
+      <label for="user_pass">Password</label>
+    </th>
+    <td>
+      <input type="password" id="password" placeholder="password" name="user_pass" id="user_pass">
+    </td>
+  </tr>
+    <tr class="form-field">
+         <th scope="row">
+      <label for="role">Role</label>
+    </th>
+    <td>
+  <select id="role"  name="meta[role]" id="role">
+    <option value="shop_manager">Shop manager</option>
+    <option value="customer">Customer</option>
+    <option selected="selected" value="subscriber">Subscriber</option>
+    <option value="contributor">Contributor</option>
+    <option value="author">Author</option>
+    <option value="editor">Editor</option>
+    <option value="administrator">Administrator</option>
+</select>
+    </td>
+ </tr>
 
 </tbody>
 </table>
-<p class="submit"><input type="submit" name="createuser" id="createusersub" class="btn" value="Save Changes"></p>
+<p class="submit"><input type="submit" name="createuser" id="createusersub" class="btn" value="Add New User"></p>
 </form>
-            </div>
-        </div>
-     </main>
+</div>
+</div>
+</main>
  </div>
  </div> 
 
